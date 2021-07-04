@@ -208,37 +208,37 @@ def next( img,solved):
 
 
 
-
-# img = cv2.imread("pic2.jpg")
-# main(img)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+# ___Using single photo
+img = cv2.imread("TestCases/pic2.jpg")
+main(img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 
 
 
 ## _____________when opening camera
-cap = cv2.VideoCapture(0)
-if not cap.isOpened():
-    print("Cannot open camera")
-    exit()
-value=0
-solved=np.zeros((450, 450,3),np.uint8)
-while True:
-    # Capture frame-by-frame
-    ret, frame = cap.read()
-    frame = cv2.resize(frame, None, None, fx=0.5, fy=0.5)
-
-    if value==0:
-            solved=main(frame)
-            value=1
-    else:
-            next(frame, solved)
-
-
-    if cv2.waitKey(1) == ord('q'):
-        break
-# When everything done, release the capture
-cap.release()
-cv2.destroyAllWindows()
+# cap = cv2.VideoCapture(0)
+# if not cap.isOpened():
+#     print("Cannot open camera")
+#     exit()
+# value=0
+# solved=np.zeros((450, 450,3),np.uint8)
+# while True:
+#     # Capture frame-by-frame
+#     ret, frame = cap.read()
+#     frame = cv2.resize(frame, None, None, fx=0.5, fy=0.5)
+#
+#     if value==0:
+#             solved=main(frame)
+#             value=1
+#     else:
+#             next(frame, solved)
+#
+#
+#     if cv2.waitKey(1) == ord('q'):
+#         break
+# # When everything done, release the capture
+# cap.release()
+# cv2.destroyAllWindows()

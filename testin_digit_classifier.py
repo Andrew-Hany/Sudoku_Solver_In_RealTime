@@ -14,7 +14,7 @@ def preprocessing(img):
     img=img/255
     return img
 
-img = cv2.imread("10.png")
+img = cv2.imread("TestCases/10.png")
 img=np.asarray(img)
 img=cv2.resize(img,(32,32))
 img=preprocessing(img)
